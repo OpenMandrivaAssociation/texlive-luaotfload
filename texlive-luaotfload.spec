@@ -1,3 +1,9 @@
+# revision 22165
+# category Package
+# catalog-ctan /macros/luatex/generic/luaotfload
+# catalog-date 2011-02-20 17:28:20 +0100
+# catalog-license gpl2
+# catalog-version 1.24
 Name:		texlive-luaotfload
 Version:	1.24
 Release:	1
@@ -72,6 +78,7 @@ LaTeX.
 #- source
 %doc %{_texmfdistdir}/source/luatex/luaotfload/Makefile
 %doc %{_texmfdistdir}/source/luatex/luaotfload/luaotfload.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -86,3 +93,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
