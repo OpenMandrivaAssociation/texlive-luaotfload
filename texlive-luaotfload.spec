@@ -1,7 +1,7 @@
-# revision 25753
+# revision 26718
 # category Package
 # catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2012-03-27 17:08:10 +0200
+# catalog-date 2012-04-27 17:19:37 +0200
 # catalog-license gpl2
 # catalog-version 1.26
 Name:		texlive-luaotfload
