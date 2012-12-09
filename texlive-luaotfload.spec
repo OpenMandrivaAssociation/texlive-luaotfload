@@ -1,12 +1,12 @@
-# revision 26718
+# revision 25753
 # category Package
 # catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2012-04-27 17:19:37 +0200
+# catalog-date 2012-03-27 17:08:10 +0200
 # catalog-license gpl2
 # catalog-version 1.26
 Name:		texlive-luaotfload
 Version:	1.26
-Release:	2
+Release:	1
 Summary:	OpenType layout system for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
@@ -82,3 +82,21 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Fri Apr 13 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.26-1
++ Revision: 790676
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.24-2
++ Revision: 753588
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.24-1
++ Revision: 718927
+- texlive-luaotfload
+- texlive-luaotfload
+- texlive-luaotfload
+- texlive-luaotfload
+
