@@ -1,13 +1,13 @@
-# revision 25753
+# revision 31286
 # category Package
 # catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2012-03-27 17:08:10 +0200
+# catalog-date 2013-07-11 18:32:48 +0200
 # catalog-license gpl2
-# catalog-version 1.26
+# catalog-version 2.3a
 Name:		texlive-luaotfload
-Version:	1.26
+Version:	2.3a
 Release:	1
-Summary:	OpenType layout system for Plain TeX and LaTeX
+Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
 License:	GPL2
@@ -36,35 +36,46 @@ LaTeX.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/mkluatexfontdb
-%{_texmfdistdir}/scripts/luaotfload/mkluatexfontdb.lua
+%{_texmfdistdir}/scripts/luaotfload/luaotfload-legacy-tool.lua
+%{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua
+%{_texmfdistdir}/scripts/luaotfload/mkcharacters
+%{_texmfdistdir}/scripts/luaotfload/mkglyphlist
+%{_texmfdistdir}/scripts/luaotfload/mkstatus
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-auxiliary.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-basics-gen.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-basics-nod.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-blacklist.cnf
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-characters.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-colors.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-database.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-extralibs.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-features.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-files.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-cbk.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-def.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-enc.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-ext.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-lua.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-tfm.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-glyphlist.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-attributes.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-database.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-merged.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-letterspace.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-loaders.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-merged.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-override.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-status.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-typo-krn.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.sty
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-blacklist.cnf
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-data-con.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-cid.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-clr.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-def.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-dum.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-ini.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-map.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-nms.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-ota.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-otb.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-otc.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-otd.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-otf.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-oti.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-otn.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-ott.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-tfm.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-font-xtx.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-luat-dum.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-luat-ovr.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-node-dum.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/otfl-node-inj.lua
 %doc %{_texmfdistdir}/doc/luatex/luaotfload/NEWS
 %doc %{_texmfdistdir}/doc/luatex/luaotfload/README
+%doc %{_texmfdistdir}/doc/luatex/luaotfload/filegraph.pdf
 %doc %{_texmfdistdir}/doc/luatex/luaotfload/luaotfload.pdf
+%doc %{_mandir}/man1/luaotfload-tool.1*
+%doc %{_texmfdistdir}/doc/man/man1/luaotfload-tool.man1.pdf
 #- source
 %doc %{_texmfdistdir}/source/luatex/luaotfload/Makefile
 %doc %{_texmfdistdir}/source/luatex/luaotfload/luaotfload.dtx
@@ -82,21 +93,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Fri Apr 13 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.26-1
-+ Revision: 790676
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.24-2
-+ Revision: 753588
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.24-1
-+ Revision: 718927
-- texlive-luaotfload
-- texlive-luaotfload
-- texlive-luaotfload
-- texlive-luaotfload
-
+mkdir -p %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
