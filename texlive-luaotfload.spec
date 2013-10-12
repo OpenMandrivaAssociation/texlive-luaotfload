@@ -6,7 +6,7 @@
 # catalog-version 2.3a
 Name:		texlive-luaotfload
 Version:	2.3a
-Release:	1
+Release:	2
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
@@ -35,6 +35,7 @@ LaTeX.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/luaotfload-tool
 %{_bindir}/mkluatexfontdb
 %{_texmfdistdir}/scripts/luaotfload/luaotfload-legacy-tool.lua
 %{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua
@@ -89,6 +90,7 @@ LaTeX.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
+    ln -sf %{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua luaotfload-tool
     ln -sf %{_texmfdistdir}/scripts/luaotfload/mkluatexfontdb.lua mkluatexfontdb
 popd
 mkdir -p %{buildroot}%{_datadir}
