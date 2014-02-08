@@ -6,7 +6,7 @@
 # catalog-version 1.26
 Name:		texlive-luaotfload
 Version:	1.26
-Release:	1
+Release:	2
 Summary:	OpenType layout system for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
