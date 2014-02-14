@@ -1,12 +1,12 @@
-# revision 31286
+# revision 32887
 # category Package
 # catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2013-07-11 18:32:48 +0200
+# catalog-date 2014-02-05 22:28:29 +0100
 # catalog-license gpl2
-# catalog-version 2.3a
+# catalog-version 2.4-3
 Name:		texlive-luaotfload
-Version:	2.3a
-Release:	7
+Version:	2.4.3
+Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
@@ -49,9 +49,9 @@ LaTeX.
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-characters.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-colors.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-database.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-extralibs.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-diagnostics.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-features.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-files.lua
+%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fontloader.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-cbk.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-def.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-enc.lua
@@ -65,10 +65,8 @@ LaTeX.
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-letterspace.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-loaders.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-merged.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-override.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-status.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-typo-krn.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.lua
 %{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.sty
 %doc %{_texmfdistdir}/doc/luatex/luaotfload/NEWS
