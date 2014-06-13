@@ -6,7 +6,7 @@
 # catalog-version 2.4-3
 Name:		texlive-luaotfload
 Version:	2.4.3
-Release:	1
+Release:	2
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
