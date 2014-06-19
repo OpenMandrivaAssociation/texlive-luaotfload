@@ -1,12 +1,12 @@
-# revision 32887
+# revision 34131
 # category Package
 # catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2014-02-05 22:28:29 +0100
+# catalog-date 2014-05-18 22:49:49 +0200
 # catalog-license gpl2
-# catalog-version 2.4-3
+# catalog-version 2.4-4
 Name:		texlive-luaotfload
-Version:	2.4.3
-Release:	2
+Version:	2.4.4
+Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
