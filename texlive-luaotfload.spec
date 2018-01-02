@@ -1,12 +1,6 @@
-# revision 34131
-# category Package
-# catalog-ctan /macros/luatex/generic/luaotfload
-# catalog-date 2014-05-18 22:49:49 +0200
-# catalog-license gpl2
-# catalog-version 2.4-4
 Name:		texlive-luaotfload
-Version:	2.4.4
-Release:	4
+Version:	2.8fix2
+Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
@@ -37,47 +31,15 @@ LaTeX.
 %files
 %{_bindir}/luaotfload-tool
 %{_bindir}/mkluatexfontdb
-%{_texmfdistdir}/scripts/luaotfload/luaotfload-legacy-tool.lua
-%{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua
-%{_texmfdistdir}/scripts/luaotfload/mkcharacters
-%{_texmfdistdir}/scripts/luaotfload/mkglyphlist
-%{_texmfdistdir}/scripts/luaotfload/mkstatus
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-auxiliary.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-basics-gen.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-basics-nod.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-blacklist.cnf
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-characters.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-colors.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-database.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-diagnostics.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-features.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fontloader.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-cbk.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-def.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-enc.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-ext.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-lua.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-fonts-tfm.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-glyphlist.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-attributes.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-database.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy-merged.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-legacy.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-letterspace.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-loaders.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-override.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload-status.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.lua
-%{_texmfdistdir}/tex/luatex/luaotfload/luaotfload.sty
-%doc %{_texmfdistdir}/doc/luatex/luaotfload/NEWS
-%doc %{_texmfdistdir}/doc/luatex/luaotfload/README
-%doc %{_texmfdistdir}/doc/luatex/luaotfload/filegraph.pdf
-%doc %{_texmfdistdir}/doc/luatex/luaotfload/luaotfload.pdf
+%{_texmfdistdir}/scripts/luaotfload
+%{_texmfdistdir}/tex/luatex/luaotfload
+%doc %{_texmfdistdir}/doc/luatex/luaotfload
 %doc %{_mandir}/man1/luaotfload-tool.1*
 %doc %{_texmfdistdir}/doc/man/man1/luaotfload-tool.man1.pdf
+%doc %{_mandir}/man5/luaotfload.conf.5*
+%doc %{_texmfdistdir}/doc/man/man5/luaotfload.conf.man5.pdf
 #- source
-%doc %{_texmfdistdir}/source/luatex/luaotfload/Makefile
-%doc %{_texmfdistdir}/source/luatex/luaotfload/luaotfload.dtx
+%doc %{_texmfdistdir}/source/luatex/luaotfload
 
 #-----------------------------------------------------------------------
 %prep
@@ -93,5 +55,6 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_mandir}/man1 %{buildroot}%{_mandir}/man5
 mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man5/*.5 %{buildroot}%{_mandir}/man5
