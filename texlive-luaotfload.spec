@@ -1,6 +1,6 @@
 Name:		texlive-luaotfload
-Version:	2.8fix2
-Release:	2
+Version:	2.96
+Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
