@@ -1,13 +1,13 @@
 Name:		texlive-luaotfload
-Version:	2.96
+Version:	64616
 Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -20,12 +20,12 @@ provided in ConTeXt, and adapts it to use in Plain TeX and
 LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,15 +43,16 @@ LaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua luaotfload-tool
-    ln -sf luaotfload-tool mkluatexfontdb
+ln -sf %{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua luaotfload-tool
+ln -sf luaotfload-tool mkluatexfontdb
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
