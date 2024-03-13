@@ -1,5 +1,5 @@
 Name:		texlive-luaotfload
-Version:	69921
+Version:	70234
 Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
