@@ -3,7 +3,7 @@ Version:	70234
 Release:	1
 Summary:	OpenType 'loader' for Plain TeX and LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
+URL:		https://www.ctan.org/tex-archive/macros/luatex/generic/luaotfload
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luaotfload.doc.r%{version}.tar.xz
