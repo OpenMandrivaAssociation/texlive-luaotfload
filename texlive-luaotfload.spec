@@ -1,5 +1,6 @@
 %global tl_name luaotfload
 %global tl_revision 74324
+%global tl_bin_links luaotfload-tool:%{_texmfdistdir}/scripts/luaotfload/luaotfload-tool.lua
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -20,6 +21,8 @@ Requires:	texlive(lua-uni-algos)
 Requires:	texlive(lualibs)
 Requires:	texlive(luaotfload.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The package adopts the TrueType/OpenType Font loader code provided in
